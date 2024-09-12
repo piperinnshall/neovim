@@ -4,7 +4,7 @@ return {
     opts = {
         directory = 'boot.themes',
         theme = {
-            'neovim',
+            'melody',
         },
     },
 }

@@ -1,4 +1,4 @@
 return {
     'tpope/vim-vinegar',
-    event = "VeryLazy",
+    event = 'VeryLazy',
 }

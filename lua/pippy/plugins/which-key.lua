@@ -1,19 +1,19 @@
 return {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
+    'folke/which-key.nvim',
+    event = 'VeryLazy',
     opts = {
-        preset = "helix",
+        preset = 'helix',
         spec = {
-            mode = { "n" },
-            { "<leader>f", group = "File" },
-            { "<leader>h", group = "Harpoon" },
-            { "<leader>g", group = "Gradle" },
+            mode = { 'n' },
+            { '<leader>f', group = 'File' },
+            { '<leader>h', group = 'Harpoon' },
+            { '<leader>g', group = 'Gradle' },
 
-            { "<leader>d", desc = "Dismiss Notifications" },
-            { "<Leader>e", desc = "Edit Neovim Config" },
-            { "<Leader>l", desc = "Lazy Menu" },
-            { "<Leader>t", desc = "Terminal Transperancy" },
-            { "<Leader>u", desc = "Toggle Undotree" },
+            { '<leader>d', desc = 'Dismiss Notifications' },
+            { '<Leader>e', desc = 'Edit Neovim Config' },
+            { '<Leader>l', desc = 'Lazy Menu' },
+            { '<Leader>t', desc = 'Terminal Transperancy' },
+            { '<Leader>u', desc = 'Toggle Undotree' },
         },
         icons = {
             mappings = false,
@@ -26,7 +26,7 @@ return {
             -- row = 0, -- set row position if you need to adjust it
             padding = { 1, 2 }, -- extra window padding [top/bottom, right/left]
             title = true,
-            title_pos = "center",
+            title_pos = 'center',
             zindex = 1000,
             bo = {},
             wo = {},
@@ -34,11 +34,11 @@ return {
     },
     keys = {
         {
-            "<leader>?",
+            '<leader>?',
             function()
-                require("which-key").show()
+                require('which-key').show()
             end,
-            desc = "Buffer Local Keymaps" 
+            desc = 'Buffer Local Keymaps'
         },
     },
 }

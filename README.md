@@ -1,3 +1,3 @@
 # 💾 nvim
 
-My [neovim](https://neovim.io/) Dot Files
+My [Neovim](https://neovim.io/) Dot Files

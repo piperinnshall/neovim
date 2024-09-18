@@ -1,5 +1,6 @@
 return {
-    'nvim-treesitter/nvim-treesitter', build = ':TSUpdate', main = 'nvim-treesitter.configs',
+    'nvim-treesitter/nvim-treesitter', build = ':TSUpdate', 
+    main = 'nvim-treesitter.configs',
     event = 'VeryLazy',
     opts = {
         -- A list of parser names, or 'all' (the five listed parsers should always be installed)
@@ -42,5 +43,5 @@ return {
                 -- Instead of true it can also be a list of languages
                 additional_vim_regex_highlighting = false,
             },
-        }
+        },
     }

@@ -1,13 +1,7 @@
 return {
     'ThePrimeagen/harpoon',
     branch = 'harpoon2',
-    keys = {
-        { '<leader>h' },
-    },
-    dependencies = {
-        'nvim-lua/plenary.nvim',
-        'nvim-telescope/telescope.nvim',
-    },
+    event = 'VeryLazy',
     config = function()
         local harpoon = require 'harpoon'
         harpoon:setup()
@@ -22,9 +16,7 @@ return {
             require('telescope.pickers')
                 .new({}, {
                     prompt_title = 'Harpoon',
-                    finder = require('telescope.finders').new_table({
-                        results = file_paths,
-                    }),
+                    finder = require('telescope.finders').new_table({ results = file_paths }),
                     previewer = conf.file_previewer({}),
                     sorter = conf.generic_sorter({}),
                 })
@@ -38,9 +30,11 @@ return {
         map('n', '<leader>hh', function()
             ui(list)
         end, opts)
+
         map('n', '<leader>ha', function()
             list:add()
         end, opts)
+
         map('n', '<leader>hm', function()
             harpoon.ui:toggle_quick_menu(list)
         end, opts)

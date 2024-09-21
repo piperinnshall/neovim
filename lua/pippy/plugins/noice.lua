@@ -11,7 +11,6 @@ return {
         },
     },
     opts = {
-        -- add any options here
         notify = {
             enabled = true,
         },

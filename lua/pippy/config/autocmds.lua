@@ -20,18 +20,11 @@ cmd('LspAttach', {
 })
 
 cmd('FileType', {
-    pattern = 'java',
-    desc = 'Set up Gradle commands for Java files',
+    pattern = { 'java', 'kotlin' },
+    desc = 'Set up Gradle commands for Java and Kotlin files',
     callback = function()
         map('n', '<leader>gb', "<cmd>TermExec cmd='./gradlew build'<cr>", opts)
         map('n', '<leader>gr', "<cmd>TermExec cmd='./gradlew run'<cr>", opts)
-    end,
-})
-
-cmd('ColorScheme', {
-    pattern = '*',
-    callback = function()
-        vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-        vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
+        map('n', '<leader>gt', "<cmd>TermExec cmd='./gradlew test'<cr>", opts)
     end,
 })

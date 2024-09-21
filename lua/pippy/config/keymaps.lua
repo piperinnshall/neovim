@@ -10,9 +10,10 @@ map('n', '<leader>u', '<cmd>UndotreeToggle<cr>', opts)
 map('n', '<leader>d', '<cmd>Noice dismiss<cr>', opts)
 
 -- File management
-map('n', '<leader>ff', '<cmd>Telescope find_files<cr>', opts)
-map('n', '<leader>fg', '<cmd>Telescope git_files<cr>', opts)
-map('n', '<leader>fl', '<cmd>Telescope live_grep<cr>', opts)
+map('n', '<leader>f', '<cmd>FzfLua<cr>', opts)
+map('n', '<leader>ff', '<cmd>FzfLua files<cr>', opts)
+map('n', '<leader>fl', '<cmd>FzfLua live_grep<cr>', opts)
+map('n', '<leader>fg', '<cmd>FzfLua git_files<cr>', opts)
 
 -- Diagnostics
 map('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)

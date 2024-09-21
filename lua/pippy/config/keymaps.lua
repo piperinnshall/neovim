@@ -10,10 +10,14 @@ map('n', '<leader>u', '<cmd>UndotreeToggle<cr>', opts)
 map('n', '<leader>d', '<cmd>Noice dismiss<cr>', opts)
 
 -- File management
-map('n', '<leader>f', '<cmd>FzfLua<cr>', opts)
 map('n', '<leader>ff', '<cmd>FzfLua files<cr>', opts)
 map('n', '<leader>fl', '<cmd>FzfLua live_grep<cr>', opts)
 map('n', '<leader>fg', '<cmd>FzfLua git_files<cr>', opts)
+map('n', '<leader>fd', '<cmd>FzfLua diagnostics_workspace<cr>', opts)
+map('n', '<leader>fm', '<cmd>FzfLua marks<cr>', opts)
+
+-- Open buffers for harpoon
+map('n', '<leader>hh', '<cmd>FzfLua buffers<cr>', opts)
 
 -- Diagnostics
 map('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>', opts)

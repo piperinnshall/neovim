@@ -1,5 +1,8 @@
 return {
     event = 'VeryLazy',
     'ibhagwan/fzf-lua',
-    opts = {},
+    opts = {
+        { 'fzf-tmux' },
+        -- { 'fzf-native' },
+    },
 }

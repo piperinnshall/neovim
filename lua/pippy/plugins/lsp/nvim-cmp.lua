@@ -7,8 +7,8 @@ return {
         'L3MON4D3/LuaSnip',
     },
     config = function()
-        local cmp = require('cmp')
-        local luasnip = require('luasnip')
+        local cmp = require 'cmp'
+        local luasnip = require 'luasnip'
 
         cmp.setup({
             window = {
@@ -35,5 +35,5 @@ return {
                 end,
             },
         })
-    end
+    end,
 }

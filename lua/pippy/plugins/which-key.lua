@@ -38,7 +38,7 @@ return {
             function()
                 require('which-key').show()
             end,
-            desc = 'Buffer Local Keymaps'
+            desc = 'Buffer Local Keymaps',
         },
     },
 }

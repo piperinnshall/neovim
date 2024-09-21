@@ -5,7 +5,7 @@ local map = vim.keymap.set
 cmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(event)
-        local lspopts = {buffer = event.buf}
+        local lspopts = { buffer = event.buf }
         map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', lspopts)
         map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<cr>', lspopts)
         map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>', lspopts)
@@ -14,9 +14,9 @@ cmd('LspAttach', {
         map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>', lspopts)
         map('n', 'gs', '<cmd>lua vim.lsp.buf.signature_help()<cr>', lspopts)
         map('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', lspopts)
-        map({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', lspopts)
+        map({ 'n', 'x' }, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', lspopts)
         map('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', lspopts)
-    end
+    end,
 })
 
 cmd('FileType', {
@@ -35,4 +35,3 @@ cmd('ColorScheme', {
         vim.api.nvim_set_hl(0, 'NormalNC', { bg = 'none' })
     end,
 })
-

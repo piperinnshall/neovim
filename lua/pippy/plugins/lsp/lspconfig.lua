@@ -10,9 +10,9 @@ return {
         'williamboman/mason-lspconfig.nvim',
     },
     config = function()
-        local lspconfig = require('lspconfig')
-        local mason = require('mason')
-        local mason_lspconfig = require('mason-lspconfig')
+        local lspconfig = require 'lspconfig'
+        local mason = require 'mason'
+        local mason_lspconfig = require 'mason-lspconfig'
 
         local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -46,30 +46,28 @@ return {
                         checkThirdParty = false,
                         library = {
                             vim.env.VIMRUNTIME,
-                            vim.fn.expand("~/Developer/lua/neovim"),
+                            vim.fn.expand '~/Developer/lua/neovim',
                         },
                     },
                     diagnostics = {
                         globals = {
                             'vim',
-                        }
-                    }
-                }
-            }
+                        },
+                    },
+                },
+            },
         })
 
         mason.setup({})
 
         mason_lspconfig.setup({
             ensure_installed = {
-                "lua_ls",
-                "jdtls",
+                'lua_ls',
+                'jdtls',
             },
             handlers = {
                 default_setup,
             },
         })
-
-
-    end
+    end,
 }

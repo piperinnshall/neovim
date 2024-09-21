@@ -5,5 +5,5 @@ return {
     config = function()
         ---@type processing.Opts
         -- vim.g.processing_nvim = {}
-    end
+    end,
 }

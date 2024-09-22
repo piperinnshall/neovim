@@ -4,6 +4,9 @@ local opt = vim.opt
 g.maplocalleader = ' '
 g.mapleader = ' '
 
+g.netrw_banner = 0
+g.netrw_list_hide = '^\\./\\|\\../'
+
 opt.swapfile = false
 
 opt.number = true

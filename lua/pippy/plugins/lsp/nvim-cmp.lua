@@ -30,9 +30,7 @@ return {
                 ['<Tab>'] = cmp.mapping.confirm({ select = true }),
             }),
             snippet = {
-                expand = function(args)
-                    luasnip.lsp_expand(args.body)
-                end,
+                expand = function(args) luasnip.lsp_expand(args.body) end,
             },
         })
     end,

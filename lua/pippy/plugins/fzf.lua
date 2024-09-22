@@ -3,6 +3,5 @@ return {
     'ibhagwan/fzf-lua',
     opts = {
         { 'fzf-tmux' },
-        -- { 'fzf-native' },
     },
 }

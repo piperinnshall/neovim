@@ -1,4 +1,7 @@
 return {
     'mbbill/undotree',
-    event = 'VeryLazy',
+    event = {
+        'BufReadPre',
+        'BufNewFile',
+    },
 }

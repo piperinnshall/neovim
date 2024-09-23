@@ -15,6 +15,7 @@ require('lazy').setup({
     spec = {
         { import = 'pippy.plugins' },
         { import = 'pippy.plugins.lsp' },
+        { import = 'pippy.plugins.ft' },
     },
     defaults = {
         lazy = true, -- should plugins be lazy-loaded?

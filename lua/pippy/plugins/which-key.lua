@@ -1,26 +1,29 @@
 return {
     'folke/which-key.nvim',
-    event = 'VeryLazy',
+    event = {
+        'BufReadPre',
+        'BufNewFile',
+    },
     opts = {
         preset = 'helix',
         spec = {
             mode = { 'n' },
             -- Groups
-            { '<leader>f',  group = 'File' },
-            { '<leader>h',  group = 'Harpoon' },
+            { '<leader>f', group = 'File' },
+            { '<leader>h', group = 'Harpoon' },
 
             -- Misc
-            { '-',          desc = 'Explore Netrw' },
-            { '<leader>d',  desc = 'Dismiss Notifications' },
-            { '<Leader>e',  desc = 'Edit Neovim Config' },
-            { '<Leader>l',  desc = 'Lazy Menu' },
-            { '<Leader>t',  desc = 'Terminal Transperancy' },
-            { '<Leader>u',  desc = 'Toggle Undotree' },
+            { '-', desc = 'Explore Netrw' },
+            { '<leader>d', desc = 'Dismiss Notifications' },
+            { '<Leader>e', desc = 'Edit Neovim Config' },
+            { '<Leader>l', desc = 'Lazy Menu' },
+            { '<Leader>t', desc = 'Terminal Transperancy' },
+            { '<Leader>u', desc = 'Toggle Undotree' },
 
             -- Diagnostics
-            { 'gl',         desc = 'Open Float' },
-            { '[d',         desc = 'Go to Previous Diagnostic' },
-            { ']d',         desc = 'Go to Next Diagnostic' },
+            { 'gl', desc = 'Open Float' },
+            { '[d', desc = 'Go to Previous Diagnostic' },
+            { ']d', desc = 'Go to Next Diagnostic' },
 
             -- Files
             { '<leader>ff', desc = 'Find Files' },
@@ -30,14 +33,14 @@ return {
             { '<leader>fm', desc = 'Marks' },
 
             -- Harpoon
-            { '<M-a>',      desc = 'Harpoon Select 1' },
-            { '<M-s>',      desc = 'Harpoon Select 2' },
-            { '<M-d>',      desc = 'Harpoon Select 3' },
-            { '<M-f>',      desc = 'Harpoon Select 4' },
-            { '<M-j>',      desc = 'Harpoon Select 5' },
-            { '<M-k>',      desc = 'Harpoon Select 6' },
-            { '<M-l>',      desc = 'Harpoon Select 7' },
-            { '<M-;>',      desc = 'Harpoon Select 8' },
+            { '<M-a>', desc = 'Harpoon Select 1' },
+            { '<M-s>', desc = 'Harpoon Select 2' },
+            { '<M-d>', desc = 'Harpoon Select 3' },
+            { '<M-f>', desc = 'Harpoon Select 4' },
+            { '<M-j>', desc = 'Harpoon Select 5' },
+            { '<M-k>', desc = 'Harpoon Select 6' },
+            { '<M-l>', desc = 'Harpoon Select 7' },
+            { '<M-;>', desc = 'Harpoon Select 8' },
 
             { '<leader>ha', desc = 'Harpoon Replace 1' },
             { '<leader>hs', desc = 'Harpoon Replace 2' },

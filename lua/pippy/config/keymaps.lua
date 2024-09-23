@@ -2,10 +2,14 @@ local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 
 -- Disable Arrows
-map({'n', 'v', 'i', 's', 'x', 'o', 'c', 't'}, '<Up>', '<Nop>', opts)
-map({'n', 'v', 'i', 's', 'x', 'o', 'c', 't'}, '<Down>', '<Nop>', opts)
-map({'n', 'v', 'i', 's', 'x', 'o', 'c', 't'}, '<Left>', '<Nop>', opts)
-map({'n', 'v', 'i', 's', 'x', 'o', 'c', 't'}, '<Right>', '<Nop>', opts)
+map({ 'n', 'v', 'i', 's', 'x', 'o', }, '<Up>', '<Nop>', opts)
+map({ 'n', 'v', 'i', 's', 'x', 'o', }, '<Down>', '<Nop>', opts)
+map({ 'n', 'v', 'i', 's', 'x', 'o', }, '<Left>', '<Nop>', opts)
+map({ 'n', 'v', 'i', 's', 'x', 'o', }, '<Right>', '<Nop>', opts)
+map({ 'n', 'v', 'i', 's', 'x', 'o', }, '<S-Up>', '<Nop>', opts)
+map({ 'n', 'v', 'i', 's', 'x', 'o', }, '<S-Down>', '<Nop>', opts)
+map({ 'n', 'v', 'i', 's', 'x', 'o', }, '<S-Left>', '<Nop>', opts)
+map({ 'n', 'v', 'i', 's', 'x', 'o', }, '<S-Right>', '<Nop>', opts)
 
 -- Misc
 map('n', '-', ':Ex<cr>', opts)

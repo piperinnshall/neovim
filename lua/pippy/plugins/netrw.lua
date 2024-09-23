@@ -1,6 +1,6 @@
 return {
     'prichrd/netrw.nvim',
-    event = 'VeryLazy',
+    ft = 'netrw',
     opts = {
         -- Put your configuration here, or leave the object empty to take the default
         -- configuration.

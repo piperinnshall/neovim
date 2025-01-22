@@ -16,7 +16,7 @@ return {
 
         local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-        local symbols = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
+        local symbols = { Error = ' ', Warn = ' ', Hint = ' ', Info = ' ' }
         for type, icon in pairs(symbols) do
             local hl = 'DiagnosticSign' .. type
             vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = '' })
@@ -64,6 +64,10 @@ return {
             ensure_installed = {
                 'lua_ls',
                 'jdtls',
+                'astro',
+                'ts_ls',
+                'vimls',
+                'taplo',
             },
             handlers = {
                 default_setup,
